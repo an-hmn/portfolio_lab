@@ -1,6 +1,8 @@
 require "pry"
 require "sinatra"
 require "sinatra/reloader"
+ require "pony"
+
 
 # error handlers
 not_found do 
@@ -15,9 +17,7 @@ end
 get "/about" do 
   erb :about
 end
-get "/contact" do 
-  erb :contact
-end
+
 get "/student/anne" do 
   erb :anne
 end
@@ -30,6 +30,13 @@ end
 get "/student/tom" do 
   erb :tom
 end
+
+get "/success" do
+erb :success    
+
+end
+
+
 
 
 
@@ -50,9 +57,40 @@ end
 
 
 # this should handle the contact form POST data
-post "/contact" do 
-  # form mail handler here
+
+get "/contact" do 
+  erb :contact
 end
+
+post '/contact' do
+  Pony.mail :from => params[:name],
+            :to => 'youremail@gmail.com',
+            :subject => params[:subject],
+            :body => params[:content],
+            :via => :smtp,
+            :via_options => {
+            :address => 'smtp.gmail.com',
+            :port => 587,
+            :enable_starttls_auto => true,
+            :user_name => 'your_user_name@gmail.com',
+            :password => 'your_gmail_password',
+            :authentication => :plain,
+            :domain => 'HELO'}
+          
+redirect "/success", 303
+
+end
+
+# 
+
+   
+
+
+
+
+ 
+
+
 
 
 
