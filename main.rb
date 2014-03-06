@@ -3,24 +3,31 @@ require "sinatra"
 require "sinatra/reloader"
 
 # everything happens at /
-get "/home" do
+# possible TOP LEVEL params are home, about, contact
+get "/:page" do
   # show homepage
-  erb :home
+  erb params[:page]
 end
 
-get "/about" do
-  # show homepage
-  erb :home
-end
 
-get "/contact" do
-  # show homepage
-  erb :home
-end
+# get "/home" do
+#   # show homepage
+#   erb :home
+# end
+
+# get "/about" do
+#   # show homepage
+#   erb :home
+# end
+
+# get "/contact" do
+#   # show homepage
+#   erb :home
+# end
 
 get "/student/:name" do
   # show studnet page
-  erb params:name
+  erb params[:name]
 end
 
 # just keeping the following lines for possible future reference
