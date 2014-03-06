@@ -24,24 +24,6 @@ header {
   text-align:left;
 }
 
-header img {
-  padding: 20 20 20 20;
-}
-
-header h1 a, header h1 a:hover {
- color: #000;
-    font-size: 55px;
-    font-weight: normal;
-    letter-spacing: -2px;
-    line-height:45px;
-    text-decoration: none;
-    text-transform: lowercase;
-}
-
-header h1 a span { 
-  color: #00A0EB;
-}
-
 .navstudent {
   background-color: #222;
   border-bottom: 5px solid #00A0EB;
@@ -52,8 +34,9 @@ header h1 a span {
 }
 
 .navstudent ul li {
-  float: right;
-  display: block;
+  position: relative;
+  display: inline-block;
+  left: 78%;
   padding: 0;
 }
 
@@ -84,7 +67,7 @@ header h1 a span {
     margin-top: 10px;
 }
 
-.sidebar h4 {
+.sidebar h3 {
   padding-bottom: 0;
   font-size: 15px;
   text-transform: uppercase;
