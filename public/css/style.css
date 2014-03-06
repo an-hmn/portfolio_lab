@@ -77,8 +77,10 @@ header h1 a span {
 
 /* Side links */
 .sidebar {
-    float: right;
-    width: 40%;
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+    width: 48%;
     margin-top: 10px;
 }
 
