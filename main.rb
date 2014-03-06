@@ -41,7 +41,7 @@ get "/contact" do
 end
 post '/contact' do
   Pony.mail :from => params[:name],
-            :to => 'youremail@gmail.com',
+            :to => 'an.hmnn@gmail.com',
             :subject => params[:subject],
             :body => params[:content],
             :via => :smtp,
@@ -49,8 +49,8 @@ post '/contact' do
             :address => 'smtp.gmail.com',
             :port => 587,
             :enable_starttls_auto => true,
-            :user_name => 'your_user_name@gmail.com',
-            :password => 'your_gmail_password',
+            :user_name => 'an.hmnn@gmail.com',
+            :password => 'jafintos',
             :authentication => :plain,
             :domain => 'HELO'}
           
