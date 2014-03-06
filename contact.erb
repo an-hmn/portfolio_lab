@@ -15,7 +15,6 @@ Your message.
 <style type="text/css">
 
 
-
 input, textarea, select {
   display: block;
   width: 40%;
@@ -23,79 +22,36 @@ input, textarea, select {
 
 #checkbox {
 
-    display:inline;
+    display:inline-block;
+    width:20px;
 }
 
-{
-  width: 40%;
-  text-align: right;
-}
-*/
+
 </style>
 
 <h1>Contact Us</h1>
+
 <form action="/" method="post">
-<!-- 
-    Basic Form
- -->
 
   <label for="user_name">Your name: </label>
   <input id="user_name" name="name" placeholder="Please enter your name" required autofocus>
 
 
-  <label for="email_demo">Your email address:</label>
-  <input type="email" id="email_demo" name="email_demo">
+  <label for="email">Your email address:</label>
+  <input type="email" id="email" name="email" placeholder="example@example.com" >
   
   <label for="subject">Message subject: </label>
   <input id="subject" name="subject" placeholder="The subject of your message">
 
 
   <label for="message">Your message:</label>
-  <textarea id="message" name="email" placeholder="Your message to us" required></textarea>
+  <textarea id="message" name="content" placeholder="Your message to us" required></textarea>
   
   <label for="checkbox">Would you like to subscribe to our newsletter?</label>
   <input id="checkbox" name="checkbox_1" type="checkbox" value="777">
- 
+
+  <p>
   <button class="send">Send</button>
-  
+  </p>
+
 </form>
-
-
-<!-- Super extra form if I have time -->
-
-
-
-
-
-<!--   <label for="select_demo">Select demo:</label>
-  <select id="select_demo" name="betsy" multiple>
-    <option>Some select menu option</option>
-    <option>Alternatively</option>
-    <option value="Hotdogs" disabled>Fast food option</option>
-    <option value="12" selected>Fashion</option>
-    <option value="13">Hair extensions</option>
-  </select> -->
-
-
- 
-
- <!--  <label for="file_demo">File demo:</label>
-  <input type="file" id="file_demo" name="file_demo">
-
-  <label for="color_demo">Color demo:</label>
-  <input type="color" id="color_demo" name="color_demo">
-
-
-  <label for="date_demo">Date demo:</label>
-  <input type="date" id="date_demo" name="date_demo"> -->
-
-<!--   <label for="range_demo">Range demo:</label>
-  <input type="range" id="range_demo" name="range_demo" min="0" max="100" value="50" step="10"> -->
- 
-  
-
-  <!-- <label>Radio:</label>
-  <input type="radio" id="group1-1" name="group1" value="1" checked> small<br>
-  <input type="radio" id="group1-2" name="group1" value="2"> medium<br>
-  <input type="radio" id="group1-3" name="group1" value="3"> large<br> -->
-
