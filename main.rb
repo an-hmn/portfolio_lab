@@ -2,34 +2,57 @@ require "pry"
 require "sinatra"
 require "sinatra/reloader"
 
-# everything happens at /
-get "/home" do
-  # show homepage
+# error handlers
+not_found do 
+  erb :'404'
+end
+error { @error = request.env['sinatra_error'] ; haml :'500' }
+
+# possible TOP LEVEL params are home, about, contact
+get "/home" do 
   erb :home
 end
-
-get "/about" do
-  # show homepage
-  erb :home
+get "/about" do 
+  erb :about
+end
+get "/contact" do 
+  erb :contact
+end
+get "/student/anne" do 
+  erb :anne
+end
+get "/student/kriss" do 
+  erb :kriss
+end
+get "/student/mark" do 
+  erb :mark
+end
+get "/student/tom" do 
+  erb :tom
 end
 
-get "/contact" do
-  # show homepage
-  erb :home
+
+
+
+
+# Joel lied - this should work but it doesn't, which is why we have the extended version as above
+# get "/:page" do
+#   erb params[:page]
+# end
+# # possible STUDENT LEVEL params are anna, kriss, mark, tom (alphabetical)
+# get "/student/:name" do
+#   # show studnet page
+#   erb params[:name]
+# end
+
+
+
+
+
+# this should handle the contact form POST data
+post "/contact" do 
+  # form mail handler here
 end
 
-get "/student/:name" do
-  # show studnet page
-  erb params:name
-end
 
-# just keeping the following lines for possible future reference
-#get parameters from the URL - two params, just step and answer
-#   step = params[:step].to_i
-#   answer = params[:answer]
-# #setup initial variables
-#   @step = 1
-#   @question = "<p>1. Do you have a test for that?</p>"
-#   @yesno = true
-#do the correct thing according to what 'step' you are up to
-#generally - update the variables to something new each time
+

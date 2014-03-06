@@ -3,11 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+
   
     <%= yield %>
 
 
+
+  <div id="container">
+    <header>
+      <a href="/home">logo</a>
+      
+      <nav id="navstudent">
+        <ul>
+          <li><a href="/student/anne">Anne</a></li>
+          <li><a href="/student/kriss">Kriss</a></li>
+          <li><a href="/student/mark">Mark</a></li>
+          <li><a href="/student/tom">Tom</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <img src="http://framingpainting.com/UploadPic/2011/big/cosmo%20kramer.jpg">
+
+ <aside class="sidebar">
+        <h4>Wicked cool stuff we are learning</h4>
+          <ul>
+            <li><a href="index.html">Ruby</a></li>
+            <li><a href="examples.html">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">Rails</a></li>
+          </ul>
+  </aside>
+
+
+    <%= yield %>
+    
+    <footer>
+      <div class="navmain">
+        <ul>
+          <li><a href="/home">home</a></li>
+          <li><a href="/about">about</a></li>
+          <li><a href="/contact">contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </div><!-- /#container -->
 </body>
 </html>
