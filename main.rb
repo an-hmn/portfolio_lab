@@ -11,6 +11,10 @@ end
 error { @error = request.env['sinatra_error'] ; haml :'500' }
 
 # possible TOP LEVEL params are home, about, contact
+
+get '/' do
+  erb :home
+end
 get "/home" do 
   erb :home
 end
