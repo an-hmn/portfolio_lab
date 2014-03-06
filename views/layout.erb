@@ -5,6 +5,27 @@
   <title>Document</title>
 </head>
 <body>
-  <%= yield %>
+  <div id="container">
+    <header>
+      <a href="/home">logo</a>
+      <nav id="navmain">
+        <ul>
+          <li><a href="/home">home</a></li>
+          <li><a href="/about">about</a></li>
+          <li><a href="/contact">contact</a></li>
+        </ul>
+      </nav>
+      <nav id="navstudent">
+        <ul>
+          <li><a href="/student/anne">Anne</a></li>
+          <li><a href="/student/kriss">Kriss</a></li>
+          <li><a href="/student/mark">Mark</a></li>
+          <li><a href="/student/tom">Tom</a></li>
+        </ul>
+      </nav>
+    </header>
+    <%= yield %>
+    <footer>Do we have info to add to the footer?</footer>
+  </div><!-- /#container -->
 </body>
 </html>
