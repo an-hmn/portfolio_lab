@@ -17,7 +17,6 @@ end
 get "/about" do 
   erb :about
 end
-
 get "/student/anne" do 
   erb :anne
 end
@@ -30,38 +29,12 @@ end
 get "/student/tom" do 
   erb :tom
 end
-
 get "/success" do
-erb :success    
-
+erb :success  
 end
-
-
-
-
-
-
-
-# Joel lied - this should work but it doesn't, which is why we have the extended version as above
-# get "/:page" do
-#   erb params[:page]
-# end
-# # possible STUDENT LEVEL params are anna, kriss, mark, tom (alphabetical)
-# get "/student/:name" do
-#   # show studnet page
-#   erb params[:name]
-# end
-
-
-
-
-
-# this should handle the contact form POST data
-
 get "/contact" do 
   erb :contact
 end
-
 post '/contact' do
   Pony.mail :from => params[:name],
             :to => 'youremail@gmail.com',
@@ -81,7 +54,20 @@ redirect "/success", 303
 
 end
 
-# 
+
+
+# Joel lied - this should work but it doesn't, which is why we have the extended version as above
+# get "/:page" do
+#   erb params[:page]
+# end
+# # possible STUDENT LEVEL params are anna, kriss, mark, tom (alphabetical)
+# get "/student/:name" do
+#   # show studnet page
+#   erb params[:name]
+# end
+
+
+
 
    
 
